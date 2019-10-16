@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fleadre.github.io</id>
     <title>Gridea</title>
-    <updated>2019-10-14T04:37:41.937Z</updated>
+    <updated>2019-10-16T02:38:15.256Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fleadre.github.io"/>
     <link rel="self" href="https://fleadre.github.io/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>https://fleadre.github.io/images/avatar.png</logo>
     <icon>https://fleadre.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Discriminative and Generative]]></title>
+        <id>https://fleadre.github.io/post/Discriminative and Generative</id>
+        <link href="https://fleadre.github.io/post/Discriminative and Generative">
+        </link>
+        <updated>2019-10-16T02:38:09.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="discriminative-and-generative">Discriminative and Generative</h1>
+<h2 id="problem">Problem</h2>
+<ul>
+<li>
+<p>Consider the following scenario</p>
+<blockquote>
+<p><em>Given a speech of someone, you need to determine which language is he spoken.</em></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="solution">Solution</h2>
+<ul>
+<li>
+<p>Generative model</p>
+<p>Learn each language and determine as to which language the speech belongs to</p>
+</li>
+<li>
+<p>Discriminative model</p>
+<p>Determine the linguistic differences without learning any language</p>
+</li>
+</ul>
+<h2 id="mathematical-analysis">Mathematical Analysis</h2>
+<p>Generative model learns the <strong>joint pdf</strong> whereas disciminative model learns the <strong>posterior pdf</strong>.</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Fleandre/PicGo/master/20191015152124.png?token=ANPIHRFLINMO6F4XF4X3DPS5UVZ2M" alt=""></figure>
+<ol>
+<li>
+<p>The distribution p(y|x) is the natural distribution for <strong>classifying a given example x into a class y</strong>, which is why algorithms that model this directly are called discriminative algorithms.</p>
+</li>
+<li>
+<p>Generative algorithms model p(x,y), which can be <strong>transformed into p(y|x) by applying Bayes rule</strong> and then used for classification. However, the distribution <strong>p(x,y) can also be used for other purposes</strong>. For example, you could use p(x,y) to <strong>generate</strong> likely (x,y) pairs.</p>
+</li>
+</ol>
+<h2 id="another-example">Another example</h2>
+<blockquote>
+<p>Suppose we have two classes of animals, elephant (y = 1) and dog (y = 0). And x is the <strong>feature vector</strong> of the animals.</p>
+</blockquote>
+<p>Given a training set, an algorithm like logistic regression or the perceptron algorithm (basically) tries to find a straight line — that is, a decision boundary — that separates the elephants and dogs. The decision boundary is build based on the difference of different feature vectors. Then, to classify a new animal as either an elephant or a dog, it checks on which side of the decision boundary it falls, and makes its prediction accordingly. We call these discriminative learning algorithm.</p>
+<p>Here's a different approach. First, looking at elephants, we can <strong>build a model of what elephants look like</strong>. Then, looking at dogs, we can <strong>build a separate model of what dogs look like</strong>. Finally, to classify a new animal, we can match the new animal against the elephant model, and match it against the dog model, to see whether the new animal looks more like the elephants or more like the dogs we had seen in the training set. We call these generative learning algorithm.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Fisrt day to Blog]]></title>
         <id>https://fleadre.github.io/post/Fisrt day to Blog</id>
